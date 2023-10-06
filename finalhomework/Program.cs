@@ -1,7 +1,36 @@
 ﻿
 
 int num = Introduction();
+int mum = SelectOperation();
 
+int SelectOperation()
+{
+    int result = default;
+    Console.WriteLine("Введите пожалуйста первую букву операции, которую хотите совершить: \n Сложение (С) \n Вычитание (В) \n Умножение (У) \n Транспонирование (Т)");
+    string inputData = Console.ReadLine();
+    inputData = inputData.ToLower();
+    switch (inputData)
+    {
+        case "с":
+            result = 1;
+            break;
+        case "в":
+            result = 2;
+            break;
+        case "у":
+            result = 3;
+            break;
+        case "т":
+            result = 4;
+            break;
+        default:
+            Console.WriteLine("Введите пожалуйста один из символов: \"c\", \"в\", \"у\", \"т\"");
+            break;
+    }
+
+    Console.Clear();
+    return result;
+}
 
 int Introduction()
 {
